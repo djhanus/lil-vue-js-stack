@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import CartPage from '../views/CartPage.vue'
-import ProductsDetailPage from '../views/ProductsDetailPage.vue'
-import ProductsPage from '../views/ProductsPage.vue'
-import NotFoundPage from '../views/NotFoundPage.vue'
+import CartPage from '../views/CartPage.vue';
+import ProductDetailPage from '../views/ProductDetailPage.vue';
+import ProductsPage from '../views/ProductsPage.vue';
+import NotFoundPage from '../views/NotFoundPage.vue';
 
 Vue.use(VueRouter)
 
@@ -12,22 +12,18 @@ const routes = [
     path: '/products',
     name: 'Products',
     component: ProductsPage,
-  },
-  {
+  }, {
     path: '/products/:id',
-    name: 'ProductsDetail',
-    component: ProductsDetailPage,
-  },
-  {
+    name: 'ProductDetail',
+    component: ProductDetailPage,
+  }, {
     path: '/cart',
-    name: 'CartPage',
+    name: 'Cart',
     component: CartPage,
-  },
-  {
+  }, {
     path: '/',
     redirect: '/products',
-  },
-  {
+  }, {
     path: '*',
     component: NotFoundPage,
   }
